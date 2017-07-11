@@ -10,6 +10,11 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="format-detection" content="telephone=no" />
 <link rel="stylesheet" type="text/css" href="public/css/reset.css">
+<link rel="stylesheet" type="text/css" href="public/css/public.css">
+<link rel="stylesheet" type="text/css" href="public/css/index.css">
+<link rel="stylesheet" type="text/css" href="public/css/number_scroll.css">
+<script src="http://cdn.bootcss.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="public/js/number_scroll.js"></script>
 </head>
 <body>
 <!-- head -->
@@ -22,9 +27,9 @@
 			首页
 		</div>
 		<div class="search-box">
-			<div>客户查询</div>
-			<input type="text">
-			<input type="button">
+			<div class="search-mark">客户查询</div>
+			<input type="text" class="search">
+			<input type="button" class="search-button">
 		</div>
 	</div>
 	<div class="head-right">
@@ -32,6 +37,87 @@
 		<a href="#" class="sign-out">退出</a>
 	</div>
 </div>
+<!-- wrap -->
+<div class="wrap">
+	<div class="left-holder"></div>
+	<div class="main-wrap">
+		<div class="item-wrap data">
+			<div class="item-head">
+				数据统计
+			</div>
+			<div class="item-box">
+				<div class="item-content">
+					<div class="item color-card">
+						<div class="item-left">
+							<div>电子色卡总数</div>
+							<div class="num"></div>
+						</div>
+						<div class="item-right">
+						</div>
+					</div>
+				</div>
 
+				<div class="item-content">
+					<div class="item model-design">
+						<div class="item-left">
+							<div>模型设计总数</div>
+							<div class="num">5,478,123</div>
+						</div>
+						<div class="item-right">
+						</div>
+					</div>
+				</div>
+
+				<div class="item-content">
+					<div class="item scenario">
+						<div class="item-left">
+							<div>场景总数</div>
+							<div class="num">146,789</div>
+						</div>
+						<div class="item-right">
+						</div>
+					</div>
+				</div>
+
+				<div class="item-content">
+					<div class="item pattern-design">
+						<div class="item-left">
+							<div>花型设计总数</div>
+							<div class="num">256,512</div>
+						</div>
+						<div class="item-right">
+						</div>
+					</div>
+				</div>
+
+				<div class="item-content"></div>
+				<div class="item-content"></div>
+			</div>
+		</div>
+		<div>
+			<div class="item-wrap">
+				<div class="item-head">
+					<div>母账户统计</div>
+					<div class="parent-account-num amount">1265</div>
+					<span>个</span>
+				</div>
+				<div class="item-box">
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+// 数字滚动
+var numRun2 = $(".color-card .num").numberAnimate({num:'256521', speed:2000, symbol:","});
+
+var numRun2 = $(".model-design .num").numberAnimate({num:'5478123', speed:2000, symbol:","});
+
+var numRun2 = $(".scenario .num").numberAnimate({num:'14789', speed:2000, symbol:","});
+
+var numRun2 = $(".pattern-design .num").numberAnimate({num:'14789', speed:2000, symbol:","});
+var numRun4 = $(".parent-account-num").numberAnimate({num:'1265', speed:2000});
+</script>
 </body>
 </html>

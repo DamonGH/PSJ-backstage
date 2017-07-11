@@ -18,7 +18,11 @@ main, article, aside, figure, footer, header, nav, section, details, summary {di
 html {
     box-sizing: border-box;
 }
-
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-flow:column;
+}
 *,
 *:before,
 *:after {
@@ -29,7 +33,7 @@ img,
 object,
 embed {max-width: 100%;}
 
-html {overflow-y: scroll;}
+html {overflow-y: scroll; min-height: 100%;}
 
 ul {list-style: none;}
 
@@ -97,7 +101,7 @@ button, input, select, textarea {margin: 0;}
 
 /* make buttons play nice in IE */
 button,
-input[type=button] {width: auto; overflow: visible;}
+input[type=button] { overflow: visible;-webkit-appearance:none;}
 
 /* scale images in IE7 more attractively */
 .ie7 img {-ms-interpolation-mode: bicubic;}
