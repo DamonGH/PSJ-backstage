@@ -15,6 +15,7 @@
 <link rel="stylesheet" type="text/css" href="public/css/number_scroll.css">
 <script src="http://cdn.bootcss.com/jquery/1.8.3/jquery.min.js"></script>
 <script src="public/js/number_scroll.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
 </head>
 <body>
 <!-- head -->
@@ -24,7 +25,20 @@
 			
 		</div>
 		<div class="nav-box">
-			首页
+			<div class="nav-select" id="nav">首页</div>
+			<div class="drop-down">
+				<a href="#">首页</a>
+				<a href="#">母账户管理</a>
+				<a href="#">公有库模型</a>
+				<a href="#">私有库模型</a>
+				<a href="#">公有库场景</a>
+				<a href="#">私有库场景</a>
+				<a href="#">公有库花型</a>
+				<a href="#">数据统计</a>
+				<a href="#">数据分析</a>
+				<a href="#">上传安装包</a>
+				<a href="#">发送通告</a>
+			</div>
 		</div>
 		<div class="search-box">
 			<div class="search-mark">客户查询</div>
@@ -101,7 +115,7 @@
 					<div class="parent-account-num amount">1265</div>
 					<span>个</span>
 				</div>
-				<div class="item-box">
+				<div class="item-box" id="parent-account">
 					
 				</div>
 			</div>
@@ -109,6 +123,69 @@
 	</div>
 </div>
 <script type="text/javascript">
+$(document).ready(function() {  
+   var chart = {
+      type: 'areaspline'     
+   };
+   var title = {
+      text: ''   
+   }; 
+   var subtitle = {
+      style: {
+         position: 'absolute',
+         right: '0px',
+         bottom: '10px'
+      }
+   };
+   var legend = {
+      layout: 'vertical',
+      align: 'left',
+      verticalAlign: 'top',
+      x: 150,
+      y: 100,
+      floating: true,
+      borderWidth: 1,
+      backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'
+   };
+   var xAxis = {
+      categories: ['今日新增','本周新增','本月新增']      
+   };
+   var yAxis = {
+      title: {
+         text: ''
+      }      
+   };
+   var tooltip = {
+       shared: true,
+       valueSuffix: ' units'
+   };
+   var credits = {
+       enabled: false
+   }
+   var plotOptions = {
+      areaspline: {
+         fillOpacity: 0.5
+      }
+   };   
+   var series= [{
+        name: '母账户新增',
+            data: [12, 124, 336]
+        },
+   ];     
+      
+   var json = {};   
+   json.chart = chart; 
+   json.title = title; 
+   json.subtitle = subtitle; 
+   json.xAxis = xAxis;
+   json.yAxis = yAxis;
+   json.legend = legend;   
+   json.plotOptions = plotOptions;
+   json.credits = credits;
+   json.series = series;
+   $('#parent-account').highcharts(json);
+  
+});
 // 数字滚动
 var numRun2 = $(".color-card .num").numberAnimate({num:'256521', speed:2000, symbol:","});
 
@@ -118,6 +195,33 @@ var numRun2 = $(".scenario .num").numberAnimate({num:'14789', speed:2000, symbol
 
 var numRun2 = $(".pattern-design .num").numberAnimate({num:'14789', speed:2000, symbol:","});
 var numRun4 = $(".parent-account-num").numberAnimate({num:'1265', speed:2000});
+
+// nav
+var timeout         = 100;
+var closetimer		= 0;
+var ddmenuitem      = 0;
+
+function jsddm_open()
+{	jsddm_canceltimer();
+	jsddm_close();
+	ddmenuitem = $(this).find('.drop-down').eq(0).css('visibility', 'visible');}
+
+function jsddm_close()
+{	if(ddmenuitem) ddmenuitem.css('visibility', 'hidden');}
+
+function jsddm_timer()
+{	closetimer = window.setTimeout(jsddm_close, timeout);}
+
+function jsddm_canceltimer()
+{	if(closetimer)
+	{	window.clearTimeout(closetimer);
+		closetimer = null;}}
+
+$(document).ready(function()
+{	$('.nav-box').bind('mouseover', jsddm_open);
+	$('.nav-box').bind('mouseout',  jsddm_timer);});
+
+document.onclick = jsddm_close;
 </script>
 </body>
 </html>
