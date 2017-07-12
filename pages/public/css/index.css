@@ -86,3 +86,12 @@
 .pattern-design .item-right{
 	background-image: url(../image/ico-design.png);
 }
+.charts-wrap{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	margin-top: 10px;
+}
+.charts-wrap .item-wrap{
+	width:33%;
+}

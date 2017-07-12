@@ -16,6 +16,8 @@
 <script src="http://cdn.bootcss.com/jquery/1.8.3/jquery.min.js"></script>
 <script src="public/js/number_scroll.js"></script>
 <script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://cdn.bootcss.com/echarts/3.6.2/echarts.js"></script>
+<script src="public/js/index.js"></script>
 </head>
 <body>
 <!-- head -->
@@ -108,7 +110,7 @@
 				<div class="item-content"></div>
 			</div>
 		</div>
-		<div>
+		<div class="charts-wrap">
 			<div class="item-wrap">
 				<div class="item-head">
 					<div>母账户统计</div>
@@ -116,76 +118,33 @@
 					<span>个</span>
 				</div>
 				<div class="item-box" id="parent-account">
-					
+				</div>
+			</div>
+
+			<div class="item-wrap">
+				<div class="item-head">
+					<div>业务员统计</div>
+					<div class="agent-num amount">1265</div>
+					<span>个</span>
+				</div>
+				<div class="item-box" id="agent">
+				</div>
+			</div>
+
+			<div class="item-wrap">
+				<div class="item-head">
+					<div>客户统计</div>
+					<div class="customer-num amount">1265</div>
+					<span>个</span>
+				</div>
+				<div class="item-box" id="customer">
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
 <script type="text/javascript">
-$(document).ready(function() {  
-   var chart = {
-      type: 'areaspline'     
-   };
-   var title = {
-      text: ''   
-   }; 
-   var subtitle = {
-      style: {
-         position: 'absolute',
-         right: '0px',
-         bottom: '10px'
-      }
-   };
-   var legend = {
-      layout: 'vertical',
-      align: 'left',
-      verticalAlign: 'top',
-      x: 150,
-      y: 100,
-      floating: true,
-      borderWidth: 1,
-      backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'
-   };
-   var xAxis = {
-      categories: ['今日新增','本周新增','本月新增']      
-   };
-   var yAxis = {
-      title: {
-         text: ''
-      }      
-   };
-   var tooltip = {
-       shared: true,
-       valueSuffix: ' units'
-   };
-   var credits = {
-       enabled: false
-   }
-   var plotOptions = {
-      areaspline: {
-         fillOpacity: 0.5
-      }
-   };   
-   var series= [{
-        name: '母账户新增',
-            data: [12, 124, 336]
-        },
-   ];     
-      
-   var json = {};   
-   json.chart = chart; 
-   json.title = title; 
-   json.subtitle = subtitle; 
-   json.xAxis = xAxis;
-   json.yAxis = yAxis;
-   json.legend = legend;   
-   json.plotOptions = plotOptions;
-   json.credits = credits;
-   json.series = series;
-   $('#parent-account').highcharts(json);
-  
-});
+
 // 数字滚动
 var numRun2 = $(".color-card .num").numberAnimate({num:'256521', speed:2000, symbol:","});
 
