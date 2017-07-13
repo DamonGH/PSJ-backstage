@@ -56,7 +56,7 @@
 	<div class="main-wrap">
 		<div class="data-wrap">
 			<div class="release-box">
-				<input type="button" value="发布通知" class="release-button">
+				<input type="button" value="发布通告" class="release-button">
 			</div>
 			<div class="table-box">
 				<table id="itemContainer">
@@ -158,6 +158,19 @@
 		</div>
 	</div>
 </div>
+
+<!-- 模态框 -->
+<div class="bg_z"></div>
+<div class="vd_blk">
+    <div id="swfid"></div>
+    <div class="clb_ctl"><img src="public/image/cls_x.png" width="16" class="cls_btn" ></div>
+</div>
+<div class="vd_blk1">
+    <div id="swfid1"></div>
+</div>
+
+
+
 <script type="text/javascript">
 // nav
 var timeout         = 100;
@@ -193,6 +206,38 @@ $(".holder").jPages({
   containerID: "itemContainer"
 });
 });
+
+function showVd(vd_key,fg){
+    $(".bg_z").fadeIn(200);
+    $(".vd_blk").fadeIn(200);
+    $("#swfid").html("<div class='pop-up'><div class='pop-up-item title'>发布新通告</div><div class='column-item'><label>通告标题</label><input type='text' class='notice-title'></div><div class='column-item'><label>通告内容</label><textarea></textarea></div><input type='button'value='确认添加' class='confirm-button'></div>");
+}
+$(".release-button").click(function(){
+    var key_name = $(this)[0].getAttribute("tit_k");
+    showVd(key_name,true);
+});
+$(".cls_btn").click(function(){
+    $(".vd_blk").fadeOut(200);
+    $(".bg_z").fadeOut(200);
+    $("#swfid").empty();
+});
+
+
+function showVd1(vd_key,fg){
+    $(".bg_z").fadeIn(200);
+    $(".vd_blk1").fadeIn(200);
+    $("#swfid1").html("<div class='delete-pop-up'><div class='pop-up-item'>是否撤销此通告</div><div class='pop-up-item button-box'><input type='button'value='确定' class='confirm-button'><input type='button'value='取消' class='confirm-button cancel-button'></div></div>");
+    $(".cancel-button").click(function(){
+    $(".vd_blk1").fadeOut(200);
+    $(".bg_z").fadeOut(200);
+    $("#swfid1").empty();
+});
+}
+$(".cancel").click(function(){
+    var key_name = $(this)[0].getAttribute("tit_k");
+    showVd1(key_name,true);
+});
+
 </script>
 </body>
 </html>

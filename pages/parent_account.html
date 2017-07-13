@@ -11,10 +11,11 @@
 <meta name="format-detection" content="telephone=no" />
 <link rel="stylesheet" type="text/css" href="public/css/reset.css">
 <link rel="stylesheet" type="text/css" href="public/css/public.css">
-<link rel="stylesheet" type="text/css" href="public/css/announce.css">
+<link rel="stylesheet" type="text/css" href="public/css/style.css">
 <link rel="stylesheet" type="text/css" href="public/css/jPages.css">
 <script src="http://cdn.bootcss.com/jquery/1.8.3/jquery.min.js"></script>
 <script src="public/js/jPages.min.js"></script>
+<script src="public/js/jquery.cityselect.js"></script>
 </head>
 <body>
 <!-- head -->
@@ -57,7 +58,7 @@
 		<div class="data-wrap">
 			<div class="release-box">
 				<input type="button" value="删除选中" class="release-button delete-button">
-				<input type="button" value="添加母账户" class="release-button">
+				<input type="button" value="添加母账户" class="release-button add-account">
 				<div class="item-search-box">
 					<input type="text" class="" placeholder="输入企业名称或ID">
 					<input type="button" value=" ">
@@ -66,7 +67,7 @@
 			<div class="table-box">
 				<table id="itemContainer">
 					<tr class="first-line">
-						<th><input type="checkbox" class="all-selected"></th>
+						<th><input type="checkbox" id="all-selected"></th>
 						<th>ID</th>
 						<th>登录名</th>
 						<th>公司名称</th>
@@ -78,7 +79,7 @@
 						<th>操作</th>
 					</tr>
 					<tr>
-						<td><input type="checkbox" class="selected"></td>
+						<td><input type="checkbox" name="sub-check" class="selected"></td>
 						<td>11265</td>
 						<td>Tony18261945684</td>
 						<td>绍兴市滨海新城明光照明电器厂</td>
@@ -89,112 +90,112 @@
 							<label class="tgl-btn" for="cb2"></label>
 						</td>
 						<td>999</td>
-						<td>充值</td>
+						<td><a href="#" class="time-recharge">充值</a></td>
 						<td><input type="button" value="修改" class="modify"><input type="button" value="删除" class="delete"></td>
 					</tr>
 					<tr>
-						<td><input type="checkbox" class="selected"></td>
+						<td><input type="checkbox" name="sub-check" class="selected"></td>
 						<td>11265</td>
 						<td>Tony18261945684</td>
 						<td>绍兴市滨海新城明光照明电器厂</td>
 						<td>2015-11-11 16:38</td>
 						<td>浙江-绍兴</td>
 						<td>
-							<input class="tgl tgl-ios" id="cb2" type="checkbox" checked="checked"/>
-							<label class="tgl-btn" for="cb2"></label>
+							<input class="tgl tgl-ios" id="cb3" type="checkbox" checked="checked"/>
+							<label class="tgl-btn" for="cb3"></label>
 						</td>
 						<td>999</td>
-						<td>充值</td>
+						<td><a href="#" class="time-recharge">充值</a></td>
 						<td><input type="button" value="修改" class="modify"><input type="button" value="删除" class="delete"></td>
 					</tr>
 					<tr>
-						<td><input type="checkbox" class="selected"></td>
+						<td><input type="checkbox" name="sub-check" class="selected"></td>
 						<td>11265</td>
 						<td>Tony18261945684</td>
 						<td>绍兴市滨海新城明光照明电器厂</td>
 						<td>2015-11-11 16:38</td>
 						<td>浙江-绍兴</td>
 						<td>
-							<input class="tgl tgl-ios" id="cb2" type="checkbox" checked="checked"/>
-							<label class="tgl-btn" for="cb2"></label>
+							<input class="tgl tgl-ios" id="cb4" type="checkbox" checked="checked"/>
+							<label class="tgl-btn" for="cb4"></label>
 						</td>
 						<td>999</td>
-						<td>充值</td>
+						<td><a href="#" class="time-recharge">充值</a></td>
 						<td><input type="button" value="修改" class="modify" disabled><input type="button" value="删除" class="delete"></td>
 					</tr>
 					<tr>
-						<td><input type="checkbox" class="selected"></td>
+						<td><input type="checkbox" name="sub-check" class="selected"></td>
 						<td>11265</td>
 						<td>Tony18261945684</td>
 						<td>绍兴市滨海新城明光照明电器厂</td>
 						<td>2015-11-11 16:38</td>
 						<td>浙江-绍兴</td>
 						<td>
-							<input class="tgl tgl-ios" id="cb2" type="checkbox" checked="checked"/>
-							<label class="tgl-btn" for="cb2"></label>
+							<input class="tgl tgl-ios" id="cb5" type="checkbox" checked="checked"/>
+							<label class="tgl-btn" for="cb5"></label>
 						</td>
 						<td>999</td>
-						<td>充值</td>
+						<td><a href="#" class="time-recharge">充值</a></td>
 						<td><input type="button" value="修改" class="modify" disabled><input type="button" value="删除" class="delete"></td>
 					</tr>
 					<tr>
-						<td><input type="checkbox" class="selected"></td>
+						<td><input type="checkbox" name="sub-check" class="selected"></td>
 						<td>11265</td>
 						<td>Tony18261945684</td>
 						<td>绍兴市滨海新城明光照明电器厂</td>
 						<td>2015-11-11 16:38</td>
 						<td>浙江-绍兴</td>
 						<td>
-							<input class="tgl tgl-ios" id="cb2" type="checkbox" checked="checked"/>
-							<label class="tgl-btn" for="cb2"></label>
+							<input class="tgl tgl-ios" id="cb6" type="checkbox" checked="checked"/>
+							<label class="tgl-btn" for="cb6"></label>
 						</td>
 						<td>999</td>
-						<td>充值</td>
+						<td><a href="#" class="time-recharge">充值</a></td>
 						<td><input type="button" value="修改" class="modify"><input type="button" value="删除" class="delete"></td>
 					</tr>
 					<tr>
-						<td><input type="checkbox" class="selected"></td>
+						<td><input type="checkbox" name="sub-check" class="selected"></td>
 						<td>11265</td>
 						<td>Tony18261945684</td>
 						<td>绍兴市滨海新城明光照明电器厂</td>
 						<td>2015-11-11 16:38</td>
 						<td>浙江-绍兴</td>
 						<td>
-							<input class="tgl tgl-ios" id="cb2" type="checkbox" checked="checked"/>
-							<label class="tgl-btn" for="cb2"></label>
+							<input class="tgl tgl-ios" id="cb7" type="checkbox" checked="checked"/>
+							<label class="tgl-btn" for="cb7"></label>
 						</td>
 						<td>999</td>
-						<td>充值</td>
+						<td><a href="#" class="time-recharge">充值</a></td>
 						<td><input type="button" value="修改" class="modify" disabled><input type="button" value="删除" class="delete"></td>
 					</tr>
 					<tr>
-						<td><input type="checkbox" class="selected"></td>
+						<td><input type="checkbox" name="sub-check" class="selected"></td>
 						<td>11265</td>
 						<td>Tony18261945684</td>
 						<td>绍兴市滨海新城明光照明电器厂</td>
 						<td>2015-11-11 16:38</td>
 						<td>浙江-绍兴</td>
 						<td>
-							<input class="tgl tgl-ios" id="cb2" type="checkbox" checked="checked"/>
-							<label class="tgl-btn" for="cb2"></label>
+							<input class="tgl tgl-ios" id="cb8" type="checkbox" checked="checked"/>
+							<label class="tgl-btn" for="cb8"></label>
 						</td>
 						<td>999</td>
-						<td>充值</td>
+						<td><a href="#" class="time-recharge">充值</a></td>
 						<td><input type="button" value="修改" class="modify"><input type="button" value="删除" class="delete"></td>
 					</tr>
 					<tr>
-						<td><input type="checkbox" class="selected"></td>
+						<td><input type="checkbox" name="sub-check" class="selected"></td>
 						<td>11265</td>
 						<td>Tony18261945684</td>
 						<td>绍兴市滨海新城明光照明电器厂</td>
 						<td>2015-11-11 16:38</td>
 						<td>浙江-绍兴</td>
 						<td>
-							<input class="tgl tgl-ios" id="cb2" type="checkbox" checked="checked"/>
-							<label class="tgl-btn" for="cb2"></label>
+							<input class="tgl tgl-ios" id="cb9" type="checkbox" checked="checked"/>
+							<label class="tgl-btn" for="cb9"></label>
 						</td>
 						<td>999</td>
-						<td>充值</td>
+						<td><a href="#" class="time-recharge">充值</a></td>
 						<td><input type="button" value="修改" class="modify" disabled><input type="button" value="删除" class="delete"></td>
 					</tr>
 				</table>
@@ -205,7 +206,90 @@
 		</div>
 	</div>
 </div>
+<!-- 模态框 -->
+<div class="bg_z"></div>
+<div class="vd_blk3">
+    <div id="swfid"></div>
+    <div class="clb_ctl"><img src="public/image/cls_x.png" width="16" class="cls_btn" ></div>
+</div>
+<div class="vd_blk1">
+    <div id="swfid1"></div>
+</div>
+
+<!-- <div class='add-account-box'><div class='pop-up-item title'>添加母账目</div><div class='pop-up-wrap'>
+	<div class='pop-up-content'>
+		<div class='pop-up-content-box'>
+			<div class='left-item'>公司名称</div>
+			<div class='right-item'><input type='text'></div>
+		</div>
+		<div class='pop-up-content-box'>
+			<div class='left-item'>所在城市</div>
+			<div class='right-item' id='city'>
+				<select class='prov'><option>浙江</option></select>
+				<select class='city' disabled='disabled'><option>绍兴</option></select>
+			</div>
+		</div>
+		<div class='pop-up-content-box'>
+			<div class='left-item'>账号</div>
+			<div class='right-item'><input type='text'></div>
+		</div>
+		<div class='pop-up-content-box'>
+			<div class='left-item'>当前密码</div>
+			<div class='right-item'><input type='text'></div>
+		</div>
+		<div class='pop-up-content-box'>
+			<div class='left-item'>手机</div>
+			<div class='right-item'><input type='text'></div>
+		</div>
+		<div class='pop-up-content-box'>
+			<div class='left-item'>公有花型权限</div>
+			<div class='right-item'><select><option value='1'>是</option><option value='0'>否</option></select></div>
+		</div>
+	</div>
+	<div class='pop-up-content'>
+		<div class='pop-up-content-box'>
+			<div class='left-item'>主营产品</div>
+			<div class='right-item'><select><option value='1'>PVC装饰片</option></select></div>
+		</div>
+		<div class='pop-up-content-box'>
+			<div class='left-item'>联系人</div>
+			<div class='right-item'><input type='text'></div>
+		</div>
+		<div class='pop-up-content-box'>
+			<div class='left-item'>公司地址人</div>
+			<div class='right-item'><input type='text'></div>
+		</div>
+		<div class='pop-up-content-box'>
+			<div class='left-item'>邮箱</div>
+			<div class='right-item'><input type='text'></div>
+		</div>
+		<div class='pop-up-content-box'>
+			<div class='left-item'>购买期限</div>
+			<div class='right-item'><select><option value='1'>试用期30天</option></select></div>
+		</div>
+	</div>
+</div><input type='button'value='确认添加' class='confirm-button'></div> -->
+
+
 <script type="text/javascript">
+$("#city").citySelect();
+$("#city").citySelect({
+    url:"public/js/city.min.js",
+    prov:"浙江",
+    city:"绍兴",
+    nodata:"none"
+});
+// checkbox全选
+
+$("#all-selected").click(function() {
+    $('input[name="sub-check"]').attr("checked",this.checked); 
+});
+var $subBox = $("input[name='sub-check']");
+$subBox.click(function(){
+    $("#all-selected").attr("checked",$subBox.length == $("input[name='sub-check']:checked").length ? true : false);
+});
+
+
 // nav
 var timeout         = 100;
 var closetimer		= 0;
@@ -233,13 +317,59 @@ $(document).ready(function()
 
 document.onclick = jsddm_close;
 
-/* when document is ready */
 $(function() {
 /* 翻页 */
 $(".holder").jPages({
   containerID: "itemContainer"
 });
 });
+
+
+function showVd3(vd_key,fg){
+    $(".bg_z").fadeIn(200);
+    $(".vd_blk3").fadeIn(200);
+    $("#swfid").html("<div class='add-account-box'><div class='pop-up-item title'>添加母账目</div><div class='pop-up-wrap'><div class='pop-up-content'><div class='pop-up-content-box'><div class='left-item'>公司名称</div><div class='right-item'><input type='text'></div></div><div class='pop-up-content-box'><div class='left-item'>所在城市</div><div class='right-item' id='city'><select class='prov'><option>浙江</option></select><select class='city' disabled='disabled'><option>绍兴</option></select></div></div><div class='pop-up-content-box'><div class='left-item'>账号</div><div class='right-item'><input type='text'></div></div><div class='pop-up-content-box'><div class='left-item'>当前密码</div><div class='right-item'><input type='text'></div></div><div class='pop-up-content-box'><div class='left-item'>手机</div><div class='right-item'><input type='text'></div></div><div class='pop-up-content-box'><div class='left-item'>公有花型权限</div><div class='right-item'><select><option value='1'>是</option><option value='0'>否</option></select></div></div></div><div class='pop-up-content'><div class='pop-up-content-box'><div class='left-item'>主营产品</div><div class='right-item'><select><option value='1'>PVC装饰片</option></select></div></div><div class='pop-up-content-box'><div class='left-item'>联系人</div><div class='right-item'><input type='text'></div></div><div class='pop-up-content-box'><div class='left-item'>公司地址人</div><div class='right-item'><input type='text'></div></div><div class='pop-up-content-box'><div class='left-item'>邮箱</div><div class='right-item'><input type='text'></div></div><div class='pop-up-content-box'><div class='left-item'>购买期限</div><div class='right-item'><select><option value='1'>试用期30天</option></select></div></div></div></div><input type='button'value='确认添加' class='confirm-button'></div>");
+}
+$(".add-account").click(function(){
+    var key_name = $(this)[0].getAttribute("tit_k");
+    showVd3(key_name,true);
+});
+$(".cls_btn").click(function(){
+    $(".vd_blk3").fadeOut(200);
+    $(".bg_z").fadeOut(200);
+    $("#swfid").empty();
+});
+
+
+function showVd1(vd_key,fg){
+    $(".bg_z").fadeIn(200);
+    $(".vd_blk1").fadeIn(200);
+    $("#swfid1").html("<div class='delete-pop-up'><div class='pop-up-item'>是否删除此账号</div><div class='pop-up-item button-box'><input type='button'value='确定' class='confirm-button'><input type='button'value='取消' class='confirm-button cancel-button'></div></div>");
+    $(".cancel-button").click(function(){
+    $(".vd_blk1").fadeOut(200);
+    $(".bg_z").fadeOut(200);
+    $("#swfid1").empty();
+});
+}
+$(".delete-button").click(function(){
+    var key_name = $(this)[0].getAttribute("tit_k");
+    showVd1(key_name,true);
+});
+function showVd2(vd_key,fg){
+    $(".bg_z").fadeIn(200);
+    $(".vd_blk1").fadeIn(200);
+    $("#swfid1").html("<div class='delete-pop-up'><div class='pop-up-item'>请选择充值时间</div><div class='select-box'><select><option value=''>试用期30天</option></select></div><div class='pop-up-item button-box'><input type='button'value='确定' class='confirm-button'><input type='button'value='取消' class='confirm-button cancel-button'></div></div>");
+    $(".cancel-button").click(function(){
+    $(".vd_blk1").fadeOut(200);
+    $(".bg_z").fadeOut(200);
+    $("#swfid1").empty();
+});
+}
+$(".time-recharge").click(function(){
+    var key_name = $(this)[0].getAttribute("tit_k");
+    showVd2(key_name,true);
+});
+
 </script>
 </body>
 </html>

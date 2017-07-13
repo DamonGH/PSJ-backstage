@@ -223,17 +223,17 @@ $(".cls_btn").click(function(){
 
 function showVd1(vd_key,fg){
     $(".bg_z").fadeIn(200);
-    $(".vd_blk").fadeIn(200);
-    $("#swfid").html("<div class='pop-up'><div class='pop-up-item title'>上传更新文件</div><div class='pop-up-item'>是否删除此更新文件</div><div class='pop-up-item button-box'><input type='button'value='确认添加' class='confirm-button'><input type='button'value='取消' class='confirm-button cancel-button'></div></div>");
+    $(".vd_blk1").fadeIn(200);
+    $("#swfid1").html("<div class='delete-pop-up'><div class='pop-up-item'>是否删除此更新文件</div><div class='pop-up-item button-box'><input type='button'value='确定' class='confirm-button'><input type='button'value='取消' class='confirm-button cancel-button' id='cancel-button'></div></div>");
+    $("#cancel-button").click(function(){
+    $(".vd_blk1").fadeOut(200);
+    $(".bg_z").fadeOut(200);
+    $("#swfid1").empty();
+});
 }
 $(".delete").click(function(){
     var key_name = $(this)[0].getAttribute("tit_k");
     showVd1(key_name,true);
-});
-$(".cancel-button").click(function(){
-    $(".vd_blk").fadeOut(200);
-    $(".bg_z").fadeOut(200);
-    $("#swfid").empty();
 });
 </script>
 </body>

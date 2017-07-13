@@ -221,7 +221,29 @@ input[type="button"]:disabled{
     left: 50%;
     top: 50%;
     margin-left: -210px;
-    margin-top: -115px;
+    margin-top: -160px;
+    z-index: 1001;
+    background: #eee;
+}
+.vd_blk3 {
+    display: none;
+    /* width: 1024px; */
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-left: -322.5px;
+    margin-top: -200px;
+    z-index: 1001;
+    background: #eee;
+}
+.vd_blk1{
+	display: none;
+    /* width: 1024px; */
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-left: -170px;
+    margin-top: -105px;
     z-index: 1001;
     background: #eee;
 }
@@ -251,12 +273,27 @@ input[type="button"]:disabled{
 }
 .pop-up{
 	width:420px;
-	height: 235px;
 	background-color: #fff;
 	display:flex;
 	flex-flow:column;
+	padding-bottom: 20px;
 }
-.pop-up .title{
+.add-account-box{
+	width:645px;
+	background-color: #fff;
+	display:flex;
+	flex-flow:column;
+	padding-bottom: 20px;
+}
+.delete-pop-up{
+	width:345px;
+	height: 210px;
+	background-color: #fff;
+	display:flex;
+	flex-flow:column;
+	padding:40px 0 20px;
+}
+.pop-up .title, .add-account-box .title{
 	border-bottom: 1px solid #f1f1f1;
 	height: 57px;
 	line-height: 57px;
@@ -269,6 +306,13 @@ input[type="button"]:disabled{
 	flex-flow: row;
 	height: 115px;
 	align-items: center;
+}
+.delete-pop-up .pop-up-item{
+	height: 60px;
+	line-height: 60px;
+	color:#848383;
+	font-size: 18px;
+	justify-content: space-around;
 }
 .pop-up-item label{
 	margin-left: 20px;
@@ -288,6 +332,73 @@ input[type="button"]:disabled{
 	display:block;
 	margin:0 auto;
 }
+.confirm-button:hover{
+	background-color: #6fbfff;
+}
 .button-box{
 	text-align: center;
+}
+.delete-pop-up .button-box{
+	margin-top: 30px;
+	padding:0 30px;
+}
+.cancel-button{
+	background-color: #f1f1f1;
+	color:#7a7a7a;
+}
+.cancel-button:hover{
+	background-color: #e1e1e1;
+}
+.pop-up .column-item{
+	padding:0 25px;
+	margin:20px 0;
+}
+.pop-up .column-item>*{
+	display:block;
+	font-size: 14px;
+	color:#868686;
+	width:100%;
+
+}
+.pop-up .column-item textarea{
+	resize: none;
+	outline: none;
+	height:200px;
+}
+.time-recharge{
+	color:#5b646c;
+}
+.select-box{
+	text-align: center;
+	margin:15px 0;
+}
+.select-box select{
+	font-size: 14px;
+	outline: none;
+	border-color: #f1f1f1;
+}
+.pop-up-wrap{
+	justify-content: space-around;
+	padding:35px 20px;
+}
+.pop-up-wrap, .pop-up-content-box{
+	display:flex;
+	flex-flow:row;
+}
+.pop-up-wrap .left-item{
+	width:100px;
+	text-align: right;
+	margin-right: 10px;
+	font-size: 14px;
+	color:#868686;
+}
+.pop-up-wrap .right-item *{
+	font-size: 14px;
+}
+.pop-up-content{
+	width:45%;
+}
+.pop-up-content-box{
+	height:45px;
+	align-items: center;
 }
