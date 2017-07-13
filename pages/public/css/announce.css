@@ -1,3 +1,79 @@
+/*switch button*/
+.tgl {
+  display: none;
+}
+.tgl, .tgl:after, .tgl:before, .tgl *, .tgl *:after, .tgl *:before, .tgl + .tgl-btn {
+  box-sizing: border-box;
+}
+.tgl::-moz-selection, .tgl:after::-moz-selection, .tgl:before::-moz-selection, .tgl *::-moz-selection, .tgl *:after::-moz-selection, .tgl *:before::-moz-selection, .tgl + .tgl-btn::-moz-selection {
+  background: none;
+}
+.tgl::selection, .tgl:after::selection, .tgl:before::selection, .tgl *::selection, .tgl *:after::selection, .tgl *:before::selection, .tgl + .tgl-btn::selection {
+  background: none;
+}
+.tgl + .tgl-btn {
+  outline: 0;
+  display: inline-block;
+  width: 4em;
+  height: 2em;
+  cursor: pointer;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  position: relative;
+  top: 11px;
+}
+.tgl + .tgl-btn:after, .tgl + .tgl-btn:before {
+  position: relative;
+  display: block;
+  content: "";
+  width: 50%;
+  height: 100%;
+}
+.tgl + .tgl-btn:after {
+  left: 0;
+}
+.tgl + .tgl-btn:before {
+  display: none;
+}
+.tgl:checked + .tgl-btn:after {
+  left: 50%;
+}
+.tgl-ios + .tgl-btn {
+  background: #fbfbfb;
+  border-radius: 2em;
+  padding: 2px;
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease;
+  border: 1px solid #e8eae9;
+}
+.tgl-ios + .tgl-btn:after {
+  border-radius: 2em;
+  background: #fbfbfb;
+  -webkit-transition: left 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), padding 0.3s ease, margin 0.3s ease;
+  transition: left 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), padding 0.3s ease, margin 0.3s ease;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 4px 0 rgba(0, 0, 0, 0.08);
+}
+.tgl-ios + .tgl-btn:hover:after {
+  will-change: padding;
+}
+.tgl-ios + .tgl-btn:active {
+  box-shadow: inset 0 0 0 2em #e8eae9;
+}
+.tgl-ios + .tgl-btn:active:after {
+  padding-right: .8em;
+}
+.tgl-ios:checked + .tgl-btn {
+  background: #86d993;
+}
+.tgl-ios:checked + .tgl-btn:active {
+  box-shadow: none;
+}
+.tgl-ios:checked + .tgl-btn:active:after {
+  margin-left: -.8em;
+}
+
+
 .data-wrap{
 	background-color: #fff;
 	padding:25px 20px;
@@ -10,15 +86,14 @@
 	color: #fff;
 	font-size: 14px;
 	border-radius: 5px;
-	margin-bottom: 20px;
 	outline: none;
+	margin-right: 15px;
 }
 .release-button:hover{
 	background-color: #82bee7;
 }
 .table-box{
 	height: 465px;
-
 }
 .table-box table{
 	width:100%;
@@ -43,7 +118,11 @@
 }
 .table-box tr>*{
 	border: solid #e4e4e4 1px;
+	padding:0 5px;
 	font-size: 14px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
 }
 .table-box td input[type="button"]{
 	border:0;
@@ -52,6 +131,14 @@
 	color:#5b646c;
 	font-size: 14px;
 	padding:0 0 0 18px;
+}
+.table-box td:first-child input[type="checkbox"], .table-box th:first-child input[type="checkbox"]{
+	display:inline-block;
+	vertical-align:middle;
+	font-size:64px;
+	width:15px;
+	height:15px;
+	margin:0 5px;
 }
 .cancel{
 	background-image: url(../image/cancel.png);
@@ -65,4 +152,52 @@
 	background-repeat: no-repeat;
 	background-size: 14px 14px;
 	background-position: 1px center;
+}
+.modify{
+	background-image: url(../image/modify.png);
+	background-repeat: no-repeat;
+	background-size: 14px 14px;
+	background-position: 1px center;
+	margin-right: 20px;
+}
+.release-box{
+	display: flex;
+	flex-flow: row;
+	align-items: center;
+	margin-bottom: 20px;
+}
+.item-search-box{
+	display: flex;
+}
+.item-search-box input[type="text"]{
+	border:1px solid #f1f1f1;
+	outline:none;
+	font-size: 14px;
+	padding: 0 10px;
+	width:180px;
+	height: 32px;
+	line-height: 32px;
+}
+.item-search-box input[type="button"]{
+	width:52px;
+	border:0;
+	background-color: #5bafe9;
+	background-image: url(../image/search-button.png);
+	background-repeat: no-repeat;
+	background-size: 15px 15px;
+	background-position: center center;
+
+}
+.release-box .delete-button{
+	background-color: #df85f3;
+}
+input[type="button"]:disabled{
+	-webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+    filter: gray;
+    opacity: 0.7;
+    cursor: not-allowed;
 }

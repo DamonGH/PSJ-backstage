@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>母账户管理-配色家</title>
+<meta name="renderer" content="webkit">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="配色家" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="format-detection" content="telephone=no" />
+<link rel="stylesheet" type="text/css" href="public/css/reset.css">
+<link rel="stylesheet" type="text/css" href="public/css/public.css">
+<link rel="stylesheet" type="text/css" href="public/css/announce.css">
+<link rel="stylesheet" type="text/css" href="public/css/jPages.css">
+<script src="http://cdn.bootcss.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="public/js/jPages.min.js"></script>
+</head>
+<body>
+<!-- head -->
+<div class="head-wrap">
+	<div class="head-left">
+		<div class="head-logo">
+			
+		</div>
+		<div class="nav-box">
+			<div class="nav-select" id="nav">母账户管理</div>
+			<div class="drop-down">
+				<a href="#">首页</a>
+				<a href="#">母账户管理</a>
+				<a href="#">公有库模型</a>
+				<a href="#">私有库模型</a>
+				<a href="#">公有库场景</a>
+				<a href="#">私有库场景</a>
+				<a href="#">公有库花型</a>
+				<a href="#">数据统计</a>
+				<a href="#">数据分析</a>
+				<a href="#">上传安装包</a>
+				<a href="#">发送通告</a>
+			</div>
+		</div>
+		<div class="search-box">
+			<div class="search-mark">客户查询</div>
+			<input type="text" class="search">
+			<input type="button" class="search-button">
+		</div>
+	</div>
+	<div class="head-right">
+		<div>你好，管理员</div>
+		<a href="#" class="sign-out">退出</a>
+	</div>
+</div>
+<!-- wrap -->
+<div class="wrap">
+	<div class="left-holder"></div>
+	<div class="main-wrap">
+		<div class="data-wrap">
+			<div class="release-box">
+				<input type="button" value="删除选中" class="release-button delete-button">
+				<input type="button" value="添加母账户" class="release-button">
+				<div class="item-search-box">
+					<input type="text" class="" placeholder="输入企业名称或ID">
+					<input type="button" value=" ">
+				</div>
+			</div>
+			<div class="table-box">
+				<table id="itemContainer">
+					<tr class="first-line">
+						<th><input type="checkbox" class="all-selected"></th>
+						<th>ID</th>
+						<th>登录名</th>
+						<th>公司名称</th>
+						<th>加入时间</th>
+						<th>城市</th>
+						<th>是否启用</th>
+						<th>登录次数</th>
+						<th>时间充值</th>
+						<th>操作</th>
+					</tr>
+					<tr>
+						<td><input type="checkbox" class="selected"></td>
+						<td>11265</td>
+						<td>Tony18261945684</td>
+						<td>绍兴市滨海新城明光照明电器厂</td>
+						<td>2015-11-11 16:38</td>
+						<td>浙江-绍兴</td>
+						<td>
+							<input class="tgl tgl-ios" id="cb2" type="checkbox" checked="checked"/>
+							<label class="tgl-btn" for="cb2"></label>
+						</td>
+						<td>999</td>
+						<td>充值</td>
+						<td><input type="button" value="修改" class="modify"><input type="button" value="删除" class="delete"></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" class="selected"></td>
+						<td>11265</td>
+						<td>Tony18261945684</td>
+						<td>绍兴市滨海新城明光照明电器厂</td>
+						<td>2015-11-11 16:38</td>
+						<td>浙江-绍兴</td>
+						<td>
+							<input class="tgl tgl-ios" id="cb2" type="checkbox" checked="checked"/>
+							<label class="tgl-btn" for="cb2"></label>
+						</td>
+						<td>999</td>
+						<td>充值</td>
+						<td><input type="button" value="修改" class="modify"><input type="button" value="删除" class="delete"></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" class="selected"></td>
+						<td>11265</td>
+						<td>Tony18261945684</td>
+						<td>绍兴市滨海新城明光照明电器厂</td>
+						<td>2015-11-11 16:38</td>
+						<td>浙江-绍兴</td>
+						<td>
+							<input class="tgl tgl-ios" id="cb2" type="checkbox" checked="checked"/>
+							<label class="tgl-btn" for="cb2"></label>
+						</td>
+						<td>999</td>
+						<td>充值</td>
+						<td><input type="button" value="修改" class="modify" disabled><input type="button" value="删除" class="delete"></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" class="selected"></td>
+						<td>11265</td>
+						<td>Tony18261945684</td>
+						<td>绍兴市滨海新城明光照明电器厂</td>
+						<td>2015-11-11 16:38</td>
+						<td>浙江-绍兴</td>
+						<td>
+							<input class="tgl tgl-ios" id="cb2" type="checkbox" checked="checked"/>
+							<label class="tgl-btn" for="cb2"></label>
+						</td>
+						<td>999</td>
+						<td>充值</td>
+						<td><input type="button" value="修改" class="modify" disabled><input type="button" value="删除" class="delete"></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" class="selected"></td>
+						<td>11265</td>
+						<td>Tony18261945684</td>
+						<td>绍兴市滨海新城明光照明电器厂</td>
+						<td>2015-11-11 16:38</td>
+						<td>浙江-绍兴</td>
+						<td>
+							<input class="tgl tgl-ios" id="cb2" type="checkbox" checked="checked"/>
+							<label class="tgl-btn" for="cb2"></label>
+						</td>
+						<td>999</td>
+						<td>充值</td>
+						<td><input type="button" value="修改" class="modify"><input type="button" value="删除" class="delete"></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" class="selected"></td>
+						<td>11265</td>
+						<td>Tony18261945684</td>
+						<td>绍兴市滨海新城明光照明电器厂</td>
+						<td>2015-11-11 16:38</td>
+						<td>浙江-绍兴</td>
+						<td>
+							<input class="tgl tgl-ios" id="cb2" type="checkbox" checked="checked"/>
+							<label class="tgl-btn" for="cb2"></label>
+						</td>
+						<td>999</td>
+						<td>充值</td>
+						<td><input type="button" value="修改" class="modify" disabled><input type="button" value="删除" class="delete"></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" class="selected"></td>
+						<td>11265</td>
+						<td>Tony18261945684</td>
+						<td>绍兴市滨海新城明光照明电器厂</td>
+						<td>2015-11-11 16:38</td>
+						<td>浙江-绍兴</td>
+						<td>
+							<input class="tgl tgl-ios" id="cb2" type="checkbox" checked="checked"/>
+							<label class="tgl-btn" for="cb2"></label>
+						</td>
+						<td>999</td>
+						<td>充值</td>
+						<td><input type="button" value="修改" class="modify"><input type="button" value="删除" class="delete"></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" class="selected"></td>
+						<td>11265</td>
+						<td>Tony18261945684</td>
+						<td>绍兴市滨海新城明光照明电器厂</td>
+						<td>2015-11-11 16:38</td>
+						<td>浙江-绍兴</td>
+						<td>
+							<input class="tgl tgl-ios" id="cb2" type="checkbox" checked="checked"/>
+							<label class="tgl-btn" for="cb2"></label>
+						</td>
+						<td>999</td>
+						<td>充值</td>
+						<td><input type="button" value="修改" class="modify" disabled><input type="button" value="删除" class="delete"></td>
+					</tr>
+				</table>
+			</div>
+			<!-- 翻页 -->
+			<div class="holder">
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+// nav
+var timeout         = 100;
+var closetimer		= 0;
+var ddmenuitem      = 0;
+
+function jsddm_open()
+{	jsddm_canceltimer();
+	jsddm_close();
+	ddmenuitem = $(this).find('.drop-down').eq(0).css('visibility', 'visible');}
+
+function jsddm_close()
+{	if(ddmenuitem) ddmenuitem.css('visibility', 'hidden');}
+
+function jsddm_timer()
+{	closetimer = window.setTimeout(jsddm_close, timeout);}
+
+function jsddm_canceltimer()
+{	if(closetimer)
+	{	window.clearTimeout(closetimer);
+		closetimer = null;}}
+
+$(document).ready(function()
+{	$('.nav-box').bind('mouseover', jsddm_open);
+	$('.nav-box').bind('mouseout',  jsddm_timer);});
+
+document.onclick = jsddm_close;
+
+/* when document is ready */
+$(function() {
+/* 翻页 */
+$(".holder").jPages({
+  containerID: "itemContainer"
+});
+});
+</script>
+</body>
+</html>
